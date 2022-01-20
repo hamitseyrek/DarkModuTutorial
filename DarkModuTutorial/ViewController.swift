@@ -14,9 +14,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
+        /*
+        // all time use this mode
+        overrideUserInterfaceStyle = .light
+         
+         //or apply to all views we need to add info.plist
+         */
     }
-    override func viewWillAppear(_ animated: Bool) {
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         //get interface that user use it
         let userInterfaceStyle = traitCollection.userInterfaceStyle
         // change  changeButton color according to the user interface
